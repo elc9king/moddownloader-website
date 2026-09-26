@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModDownloader — Minecraft Mod Launcher</title>
+  <meta name="description" content="ModDownloader is a Windows launcher that searches and downloads Minecraft mods from Modrinth and CurseForge, manages instances, and launches Minecraft with Fabric, NeoForge, Quilt, Forge, or Vanilla.">
+  <meta property="og:title" content="ModDownloader — Minecraft Mod Launcher">
+  <meta property="og:description" content="Search, download, and manage Minecraft mods from Modrinth and CurseForge — with instances, accounts, and an in-game HUD client.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/screenshots/launcher-home.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="logo" aria-hidden="true">M</span> ModDownloader</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <div class="nav-links" id="navlinks">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="download.html">Download</a>
+        <a href="index.html#features">Features</a>
+        <a href="releases.html">Releases</a>
+        <a href="install.html">Install Guide</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <!-- ============ HERO ============ -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">ModDownloader</h1>
+          <p class="subtitle">Your Minecraft mods, instances, and versions — all in one place.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-download-btn href="#">Download ModDownloader</a>
+            <a class="btn btn-secondary" href="releases.html">View Releases</a>
+          </div>
+          <p class="status-line">
+            <span>Latest version: <strong data-config="APP_VERSION"></strong></span>
+            <span>Released: <strong data-config="RELEASE_DATE"></strong></span>
+            <span>Platform: <strong data-config="PLATFORM"></strong></span>
+          </p>
+          <p class="os-note" data-os-note></p>
+        </div>
+        <figure class="hero-shot">
+          <a href="index.html#screenshots" class="no-focus" aria-hidden="true" tabindex="-1">
+            <img src="assets/screenshots/launcher-home.png" alt="Screenshot of the ModDownloader launcher home screen on Windows" loading="eager" width="1920" height="1166">
+          </a>
+          <figcaption class="shot-caption">Actual screenshot of the ModDownloader launcher (Windows).</figcaption>
+        </figure>
+      </section>
+
+      <!-- ============ FEATURES ============ -->
+      <section id="features" aria-labelledby="features-title">
+        <h2 id="features-title">Features</h2>
+        <p class="muted">Every feature listed here exists in the current build.</p>
+        <div class="grid grid-3">
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> Mod downloading</h3>
+            <p class="muted">Search mods, shaders, and resource packs, then download them straight into an instance's folders.</p>
+          </div>
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> Modrinth integration</h3>
+            <p class="muted">Browse and download from Modrinth out of the box.</p>
+          </div>
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> CurseForge integration</h3>
+            <p class="muted">Search CurseForge too. Requires your own (free) CurseForge API key, entered in the app's Settings.</p>
+          </div>
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> Minecraft version selection</h3>
+            <p class="muted">Versions are fetched live from Mojang's official version manifest.</p>
+          </div>
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> Instance management</h3>
+            <p class="muted">Create separate instances with their own version, loader, and memory settings.</p>
+          </div>
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> Account management</h3>
+            <p class="muted">Sign in with a Microsoft account, or use an offline profile.</p>
+          </div>
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> In-game HUD client</h3>
+            <p class="muted">A built-in client (FastClient) adds HUD modules like FPS, CPS, keystrokes, coordinates, and armor status — compatible with Vanilla, Fabric, Forge, NeoForge, and Quilt.</p>
+          </div>
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> Server management</h3>
+            <p class="muted">Keep a server list with addresses and descriptions.</p>
+          </div>
+          <div class="card feature">
+            <h3><span class="icon-dot" aria-hidden="true"></span> Performance recommendations</h3>
+            <p class="muted">Detects hardware and suggests JVM arguments and video settings for your instances.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MINECRAFT VERSIONS ============ -->
+      <section aria-labelledby="versions-title">
+        <h2 id="versions-title">Minecraft versions</h2>
+        <p class="muted">The launcher lists versions from Mojang's official version manifest. Recent releases targeted by the current build:</p>
+        <div class="chips" data-version-chips role="list" aria-label="Supported Minecraft versions"></div>
+        <p class="small muted mt">Older versions remain available in-app via the version selector.</p>
+      </section>
+
+      <!-- ============ LOADERS ============ -->
+      <section aria-labelledby="loaders-title">
+        <h2 id="loaders-title">Mod loaders</h2>
+        <div class="grid grid-3" data-loader-cards></div>
+      </section>
+
+      <!-- ============ SCREENSHOTS ============ -->
+      <section id="screenshots" aria-labelledby="shots-title">
+        <h2 id="shots-title">Screenshots</h2>
+        <div class="gallery">
+          <button type="button" data-shot="assets/screenshots/launcher-home.png" aria-label="Open screenshot: launcher home screen in larger viewer">
+            <img src="assets/screenshots/launcher-home.png" alt="Launcher home screen showing the dashboard and navigation" loading="lazy" width="1920" height="1166">
+          </button>
+          <button type="button" data-shot="assets/screenshots/launcher-instances.png" aria-label="Open screenshot: instance management in larger viewer">
+            <img src="assets/screenshots/launcher-instances.png" alt="Instance management screen showing isolated Minecraft instances with version and loader details" loading="lazy" width="1920" height="1166">
+          </button>
+          <button type="button" data-shot="assets/screenshots/launcher-mods.png" aria-label="Open screenshot: installed mods in larger viewer">
+            <img src="assets/screenshots/launcher-mods.png" alt="Mods screen listing installed mods with enable, disable, and delete controls" loading="lazy" width="1920" height="1166">
+          </button>
+          <button type="button" data-shot="assets/screenshots/launcher-marketplace.png" aria-label="Open screenshot: marketplace in larger viewer">
+            <img src="assets/screenshots/launcher-marketplace.png" alt="Marketplace screen searching mods on Modrinth and CurseForge with download buttons" loading="lazy" width="1920" height="1166">
+          </button>
+          <button type="button" data-shot="assets/screenshots/launcher-settings.png" aria-label="Open screenshot: settings in larger viewer">
+            <img src="assets/screenshots/launcher-settings.png" alt="Settings screen with launcher behavior, appearance, Minecraft, performance, and launcher tabs" loading="lazy" width="1920" height="1166">
+          </button>
+        </div>
+        <p class="small muted mt">Screenshots are actual captures of the application.</p>
+      </section>
+
+      <!-- ============ SYSTEM REQUIREMENTS ============ -->
+      <section aria-labelledby="req-title">
+        <h2 id="req-title">System requirements</h2>
+        <table class="table">
+          <thead><tr><th scope="col">Component</th><th scope="col">Requirement</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Operating system</th><td>Windows 10 or 11 (64-bit)</td></tr>
+            <tr><th scope="row">Java</th><td>Not required — the launcher ships with its own bundled Java runtime</td></tr>
+            <tr><th scope="row">RAM</th><td>Memory is configurable per instance (defaults of 2–6 GB are configured per instance in the launcher)</td></tr>
+            <tr><th scope="row">Storage</th><td>Installer download is <span data-config="DOWNLOAD_SIZE"></span>; instances and mods add additional space</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ SECURITY & TRUST ============ -->
+      <section aria-labelledby="trust-title">
+        <h2 id="trust-title">Security &amp; download trust</h2>
+        <div class="card">
+          <ul>
+            <li><strong>Official sources only.</strong> Download ModDownloader only from this website's download page or official release links published by the project. Files from other sources are not verified by us.</li>
+            <li><strong>Verify what you download.</strong> Windows may show a SmartScreen prompt for files that are new or not yet widely downloaded. Check the file name (<code data-config="DOWNLOAD_FILENAME"></code>) and size (<span data-config="DOWNLOAD_SIZE"></span>) before running it.</li>
+            <li><strong>Third-party content.</strong> Mods downloaded through ModDownloader come from Modrinth and CurseForge. Review mods and their authors before installing them into your game.</li>
+            <li><strong>No exaggerated claims.</strong> We don't claim the app is "virus free" or "guaranteed safe" — no independent certification currently exists for this project. Keep your operating system and antivirus up to date as usual.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+
+        <details>
+          <summary>What is ModDownloader?</summary>
+          <div>ModDownloader is a Windows launcher for Minecraft that lets you search and download mods from Modrinth and CurseForge, manage game instances, sign in with a Microsoft account, and launch Minecraft — with an optional in-game HUD client built in.</div>
+        </details>
+        <details>
+          <summary>Which Minecraft versions are supported?</summary>
+          <div>The launcher fetches available versions from Mojang's official version manifest, so all current versions are selectable in-app. Recent releases the current build targets include <span class="muted" id="faq-versions">1.21 through 1.21.11</span>.</div>
+        </details>
+        <details>
+          <summary>Which mod loaders are supported?</summary>
+          <div>Fabric, NeoForge, Quilt, and Vanilla are supported. Forge is experimental: it is selectable, but launching may fall back to the vanilla client while Forge loader metadata is unavailable.</div>
+        </details>
+        <details>
+          <summary>How do I install ModDownloader?</summary>
+          <div>Download <span data-config="DOWNLOAD_FILENAME"></span> from the <a href="download.html">Download page</a>, run the installer, and follow its steps. Full walkthrough: <a href="install.html">Installation guide</a>.</div>
+        </details>
+        <details>
+          <summary>Where do I download updates?</summary>
+          <div>On the <a href="releases.html">Releases page</a>. Each release lists its version, date, and download.</div>
+        </details>
+        <details>
+          <summary>Where can I report bugs?</summary>
+          <div>
+            [ADD VERIFIED INFORMATION] — an official issue tracker (e.g. GitHub repository) or contact address has not been published yet. Once available, it will be linked here and in the footer.
+          </div>
+        </details>
+        <details>
+          <summary>Does ModDownloader collect my data?</summary>
+          <div>This website collects nothing (no cookies, analytics, or tracking). The launcher stores your settings and accounts locally on your computer. Details: <a href="privacy.html">Privacy Policy</a>.</div>
+        </details>
+        <details>
+          <summary>Where can I read the Privacy Policy?</summary>
+          <div><a href="privacy.html">/privacy</a></div>
+        </details>
+        <details>
+          <summary>Where can I read the Terms of Service?</summary>
+          <div><a href="terms.html">/terms</a></div>
+        </details>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>ModDownloader</h3>
+          <p>Your Minecraft mods, instances, and versions — all in one place. Free, open development, Windows only.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ModDownloader. Not affiliated with Mojang, Microsoft, Modrinth, or CurseForge.</span>
+        <span>
+          GitHub: <a data-github-link href="#" aria-disabled="true">[ADD VERIFIED INFORMATION]</a> ·
+          Discord: <a data-discord-link href="#" aria-disabled="true">[ADD VERIFIED INFORMATION]</a> ·
+          Contact: <span>[ADD VERIFIED CONTACT]</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

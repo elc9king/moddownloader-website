@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation Guide — ModDownloader</title>
+  <meta name="description" content="How to install ModDownloader on Windows and set up your first Minecraft instance.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="logo" aria-hidden="true">M</span> ModDownloader</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <div class="nav-links" id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="download.html">Download</a>
+        <a href="index.html#features">Features</a>
+        <a href="releases.html">Releases</a>
+        <a href="install.html" aria-current="page">Install Guide</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <h1>Installation guide</h1>
+      <p class="muted">ModDownloader is distributed for Windows as an installer (<span
+          data-config="DOWNLOAD_FILENAME"></span>, <span data-config="DOWNLOAD_SIZE"></span>). The installer includes a
+        private Java runtime, so you do not need to install Java separately.</p>
+
+      <section aria-labelledby="steps-title">
+        <h2 id="steps-title">Installing</h2>
+        <div class="card">
+          <ol>
+            <li><strong>Download ModDownloader.</strong> Get <span data-config="DOWNLOAD_FILENAME"></span> from the <a
+                href="download.html">Download page</a>.</li>
+            <li><strong>Open the downloaded file.</strong> Double-click the installer. Windows may show a SmartScreen
+              prompt for new software — this is standard for unsigned applications; review the file name and size before
+              continuing.</li>
+            <li><strong>Follow the installation instructions.</strong> The installer walks you through choosing a folder
+              (default: <code>Program Files\Shama Client</code>) and creating shortcuts.</li>
+            <li><strong>Launch ModDownloader.</strong> Use the desktop or Start Menu shortcut.</li>
+            <li><strong>Create or select an instance.</strong> Instances are separate game setups, each with its own
+              version, loader, and memory settings.</li>
+            <li><strong>Select a Minecraft version and loader.</strong> Versions come from Mojang's official manifest;
+              loaders include Fabric, NeoForge, Quilt, Forge (experimental), and Vanilla.</li>
+            <li><strong>Install mods.</strong> Open the Marketplace tab, search Modrinth or CurseForge, and download
+              mods, shaders, or resource packs directly into the instance.</li>
+            <li><strong>Add an account and play.</strong> Sign in with a Microsoft account in the Accounts tab, or use
+              an offline profile.</li>
+          </ol>
+        </div>
+        <p class="small muted">We do not recommend disabling Windows Defender, SmartScreen, or any security software —
+          keep them enabled as usual.</p>
+      </section>
+
+      <section aria-labelledby="curseforge-note">
+        <h2 id="curseforge-note">Using CurseForge</h2>
+        <div class="card">
+          <p class="muted">Modrinth works out of the box. To enable CurseForge search, you need a CurseForge API key:
+          </p>
+          <ol class="muted">
+            <li>Register a mod developer / console account on CurseForge's official website and request an API key.</li>
+            <li>In ModDownloader, open <strong>Settings</strong> and paste your key into the CurseForge API key field.
+            </li>
+          </ol>
+          <p class="small muted">Your key is stored locally on your computer and is sent only to CurseForge's official
+            API. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="trouble-title">
+        <h2 id="trouble-title">Troubleshooting</h2>
+        <div class="card">
+          <ul class="muted">
+            <li><strong>The game doesn't launch on Forge:</strong> Forge support is experimental — the launcher may fall
+              back to the vanilla client while Forge loader metadata is unavailable. Use Fabric or NeoForge for full
+              loader support.</li>
+            <li><strong>CurseForge search fails:</strong> check that your API key is entered correctly in Settings.</li>
+            <li><strong>Download issues:</strong> make sure you're using the official <a href="download.html">Download
+                page</a>.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>ModDownloader</h3>
+          <p>Your Minecraft mods, instances, and versions — all in one place. Free, open development, Windows only.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ModDownloader. Not affiliated with Mojang, Microsoft, Modrinth, or CurseForge.</span>
+        <span>
+          GitHub: <a data-github-link href="#" aria-disabled="true">[ADD VERIFIED INFORMATION]</a> ·
+          Discord: <a data-discord-link href="#" aria-disabled="true">[ADD VERIFIED INFORMATION]</a> ·
+          Contact: <span>[ADD VERIFIED CONTACT]</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

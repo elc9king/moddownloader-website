@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Releases — ModDownloader</title>
+  <meta name="description" content="ModDownloader release notes and downloads: versions, dates, and changes.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="logo" aria-hidden="true">M</span> ModDownloader</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <div class="nav-links" id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="download.html">Download</a>
+        <a href="index.html#features">Features</a>
+        <a href="releases.html" aria-current="page">Releases</a>
+        <a href="install.html">Install Guide</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <h1>Releases</h1>
+      <p class="muted">Release notes describe only what is actually implemented in each build. No invented dates,
+        numbers, or claims.</p>
+
+      <!-- Release entries: keep each release in its own <article>, newest first. -->
+      <article class="card" aria-labelledby="rel-010">
+        <h2 id="rel-010">ModDownloader <span data-config="APP_VERSION"></span></h2>
+        <p class="muted">Released: <span data-config="RELEASE_DATE"></span></p>
+
+        <h3>What's new</h3>
+        <p class="muted">Initial development build. The launcher ships with the following verified functionality:</p>
+
+        <h3 style="font-size:1rem">New features</h3>
+        <ul class="muted">
+          <li>Mod, shader, and resource pack search and download via Modrinth and CurseForge (CurseForge requires your
+            own API key)</li>
+          <li>Instance management with per-instance Minecraft version, loader, and memory configuration</li>
+          <li>Minecraft version selection fetched from Mojang's official version manifest</li>
+          <li>Microsoft account sign-in and offline profiles</li>
+          <li>Built-in FastClient in-game HUD modules (FPS, CPS, keystrokes, coordinates, armor status, and more)</li>
+          <li>Server list management</li>
+          <li>Hardware-aware performance recommendations and video settings guidance</li>
+        </ul>
+
+        <h3 style="font-size:1rem">Improvements</h3>
+        <ul class="muted">
+          <li>Windows installer bundles a private Java runtime — no separate Java install required</li>
+          <li>Fabric and Quilt launching via Fabric Meta loader profiles; Forge/NeoForge fall back to vanilla launching
+            when loader metadata is unavailable</li>
+        </ul>
+
+        <h3 style="font-size:1rem">Bug fixes</h3>
+        <ul class="muted">
+          <li>[ADD VERIFIED INFORMATION] — no bug-fix list has been published for this initial build</li>
+        </ul>
+
+        <p class="mt"><a class="btn btn-primary btn-small" data-download-btn href="#">Download this release</a></p>
+        <p class="small muted">File: <span data-config="DOWNLOAD_FILENAME"></span> · Size: <span
+            data-config="DOWNLOAD_SIZE"></span> · [ADD VERIFIED INFORMATION for release URL]</p>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>ModDownloader</h3>
+          <p>Your Minecraft mods, instances, and versions — all in one place. Free, open development, Windows only.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ModDownloader. Not affiliated with Mojang, Microsoft, Modrinth, or CurseForge.</span>
+        <span>
+          GitHub: <a data-github-link href="#" aria-disabled="true">[ADD VERIFIED INFORMATION]</a> ·
+          Discord: <a data-discord-link href="#" aria-disabled="true">[ADD VERIFIED INFORMATION]</a> ·
+          Contact: <span>[ADD VERIFIED CONTACT]</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
